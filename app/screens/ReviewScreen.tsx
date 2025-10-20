@@ -1,12 +1,13 @@
 import React from "react";
 import { Text, View } from "react-native";
+import { Button } from "react-native-elements";
 
 const ReviewScreen = () => {
   const navigationOptions = {
     title: "Review Jobs",
-    header: () => {
+    header: ({navigate}: {navigate: any}) => {
       return {
-        right: <Text>Go Right</Text>,
+        right: <Button title="Settings" onPress={() => {navigate('settings')}} />,
       };
     },
   };
